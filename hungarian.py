@@ -266,16 +266,7 @@ with tab2:
   sample_csv = df_final.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
 
   st.write("")
-  st.download_button(
-    "Download CSV Example",
-    data=sample_csv,
-    file_name='sample_heart_disease_parameters.csv',
-    mime='text/csv',
-    key="download_button"
-  ).button(
-      type="default",
-      help="Click to download the example CSV file",
-  )
+  st.download_button("Download CSV Example", data=sample_csv, file_name='sample_heart_disease_parameters.csv', mime='text/csv')
 
   st.write("")
   st.write("")
