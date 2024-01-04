@@ -110,7 +110,7 @@ st.write("")
 tab1, tab2, tab3 = st.tabs(["Single-predict", "Multi-predict", "Description"])
 
 with tab1:
-  st.sidebar.header("**User Input**")
+  st.sidebar.header("**User Input** Sidebar")
 
   age = st.sidebar.number_input(label=":violet[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
   st.sidebar.write(f":orange[Min] value: :orange[**{df_final['age'].min()}**], :red[Max] value: :red[**{df_final['age'].max()}**]")
@@ -215,7 +215,7 @@ with tab1:
 
   result = ":violet[-]"
 
-  predict_btn = st.button("**Predict**", type="success")
+  predict_btn = st.button("**Predict**", type="primary")
 
   st.write("")
   if predict_btn:
