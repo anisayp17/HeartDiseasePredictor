@@ -112,8 +112,8 @@ tab1, tab2, tab3 = st.tabs(["Single-predict", "Multi-predict", "Description"])
 with tab1:
   st.sidebar.header("**User Input** Sidebar")
 
-  age = st.sidebar.number_input(label=":navy[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
-  st.sidebar.write(f":orange[Min] value: :gold[**{df_final['age'].min()}**], :red[Max] value: :red[**{df_final['age'].max()}**]")
+  age = st.sidebar.number_input(label=":blue[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
+  st.sidebar.write(f":orange[Min] value: :gold[**{df_final['age'].min()}**],:red[Max] value::red[**{df_final['age'].max()}**]")
   st.sidebar.write("")
 
   sex_sb = st.sidebar.selectbox(label=":violet[**Sex**]", options=["Male", "Female"])
