@@ -225,15 +225,15 @@ with tab1:
 
   result = ":violet[-]"
 
-predict_btn = st.button("Predict", key="prediction_button", type="success", help="Click to make a prediction")
-predict_btn.markdown(
-    """<style>
-       button.css-2trqy4[type="success"]:hover {
-           background-color: #28a745;
-       }
-       </style>
-    """, unsafe_allow_html=True
-)
+  predict_btn = st.button("Predict", key="prediction_button", type="success", help="Click to make a prediction")
+  predict_btn.markdown(
+      """<style>
+         button.css-2trqy4[type="success"]:hover {
+             background-color: #28a745;
+         }
+         </style>
+      """, unsafe_allow_html=True
+  )
 
   st.write("")
   if predict_btn:
