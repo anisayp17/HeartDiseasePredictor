@@ -223,9 +223,9 @@ with tab1:
   st.dataframe(preview_df.iloc[:, 6:])
   st.write("")
 
-  result = ":violet[-]"
+  result = ":blue[-]"
 
-  predict_btn = st.button("Predict", key="prediction_button", type="success")
+  predict_btn = st.button("**Predict**", type="primary")
 
   st.write("")
   if predict_btn:
