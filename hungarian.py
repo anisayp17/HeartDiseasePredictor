@@ -112,6 +112,16 @@ tab1, tab2, tab3 = st.tabs(["Single-predict", "Multi-predict", "Description"])
 with tab1:
   st.sidebar.header("**User Input** Sidebar")
 
+  st.sidebar.markdown(
+    """<style>
+       .sidebar-content:hover {
+           background-color: #f8f9fa;
+           transition: background-color 0.3s ease;
+       }
+       </style>
+    """, unsafe_allow_html=True
+  )
+  
   age = st.sidebar.number_input(label=":blue[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
   st.sidebar.write(f":orange[Min] value: :yellow[**{df_final['age'].min()}**], :red[Max] value: :red[**{df_final['age'].max()}**]")
   st.sidebar.write("")
@@ -215,7 +225,15 @@ with tab1:
 
   result = ":violet[-]"
 
-  predict_btn = st.button("**Predict**", type="primary")
+predict_btn = st.button("Predict", key="prediction_button", type="success", help="Click to make a prediction")
+predict_btn.markdown(
+    """<style>
+       button.css-2trqy4[type="success"]:hover {
+           background-color: #28a745;
+       }
+       </style>
+    """, unsafe_allow_html=True
+)
 
   st.write("")
   if predict_btn:
@@ -256,7 +274,16 @@ with tab2:
   sample_csv = df_final.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
 
   st.write("")
-  st.download_button("Download CSV Example", data=sample_csv, file_name='sample_heart_disease_parameters.csv', mime='text/csv')
+  st.download_button(
+    "Download CSV Example",
+    data=sample_csv,
+    file_name='sample_heart_disease_parameters.csv',
+    mime='text/csv',
+    key="download_button"
+  ).button(
+      type="default",
+      help="Click to download the example CSV file",
+  )
 
   st.write("")
   st.write("")
