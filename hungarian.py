@@ -103,8 +103,6 @@ st.set_page_config(
   page_icon = "logo.png"
 )
 
-st.set_theme("light")
-
 st.title("Hungarian Heart Disease")
 st.write(f"**_Model's Accuracy_** :  :green[**{accuracy}**]% (:red[_Do not copy outright_])")
 st.write("")
